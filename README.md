@@ -37,6 +37,3 @@ And our reverse shell is launched:
 After connecting the arduino to a linux machine, a command is run in the background and it can now be detected only through the list of system processes:  
 
 ![reverse_shell_in_linux](https://github.com/EvtDanya/Reverse-Shell-Arduino/blob/main/reverse_lin.png)  
-
-## Feedback  
-If you have any questions or suggestions, please dm me https://t.me/d3f3nd3r
